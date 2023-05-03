@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express Skills</title>
-</head>
-<body>
+<%- include('../partials/header') %>
     
     <h3>
         <%= skill.skill %>
@@ -16,5 +8,10 @@
         Skill Level: <%= skill.level %>
     </h3>
 
-</body>
-</html>
+    <a class="btn btn-primary" href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+
+    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+        <button type="submit" class="btn btn-danger">Delete Skill</button>
+    </form>
+    
+<%- include('../partials/footer') %>

@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+
+<form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+    <div class="mb-3">
+        <input type="text" class="form-control" id="skill" aria-describedby="skillHelp" name="skill" value="<%= skill.skill %>">
+        <div id="skillHelp" class="form-text">Please input changes above</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Update To-Do</button>
+</form>
+
+<%- include('../partials/footer') %>
